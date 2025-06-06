@@ -20,6 +20,3 @@ services:
       dockerfile: docker/php/Dockerfile
     volumes:
       - './src:/var/www/html'
-
-    depends_on:
-      - phpmyadmin
