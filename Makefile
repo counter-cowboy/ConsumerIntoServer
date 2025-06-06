@@ -1,11 +1,11 @@
 .PHONY: help build up start down destroy stop restart logs logs-api ps login-timescale login-api db-shell
 
 env:
-	mv /src/.env.example /src/.env
+	mv ./src/.env.example ./src/.env
 build:
 	docker compose build
 up:
-	chmod 644 ./docker/volume/init.sql
+	chmod 777 -R ./src/storage
 	docker compose up -d
 down:
 	docker compose down
